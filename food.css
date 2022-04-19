@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spirax', cursive;
+    /* background-color: yellow; */
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    /* padding: 5px; */
+}
+
+.logo img{
+    margin-top: 3px;
+    border-radius: 100px 100px 100px 100px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: auto 15px;
+}
+
+nav ul li a{
+    transition: color 1.2s;
+    transition: font-size 1.2s;
+}
+
+a:hover{
+    color: rgb(255, 5, 5);
+    font-size: 1.3rem;
+    /* transition: transform 5ss; */
+}
+
+a{
+    text-decoration: none;
+    color: rgb(82, 71, 71);
+}
+
+p{
+    color: rgb(82, 71, 71);
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 400px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding-top: 66px;
+    padding-bottom: 37px;
+    border-radius: 110px 108px 73px 73px;
+}
+
+.col-2 h1 {
+    font-size: 52px;
+    line-height: 55px;
+    margin: 14px 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ee0000;
+    border: 2px solid red;
+    border-radius: 81px;
+    padding: 3px 21px;
+    margin: 10px 4px;
+    color: white;
+    transition: background 0.8s;
+}
+
+.btn:hover{
+    background: radial-gradient(rgb(255, 0, 0), rgba(255, 255, 2, 0.466));
+}
+
+.btn:active{
+    background: radial-gradient(rgba(255, 255, 2, 0.466), rgb(255, 0, 0));
+}
+
+.header{
+    background: radial-gradient( rgba(226, 223, 223, 0.438), rgb(255, 185, 185));
+}
+
+/* .header .row{
+    margin-top: 70px;
+} */
+
+.categories{
+    margin: 70px 0px;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    margin-bottom: 50px;
+    min-width: 200px;
+    transition: transform 0.5s;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.red-star {
+    color: rgb(226, 100, 42);
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after{
+    content: '';
+    background: rgb(255, 151, 77);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4{
+    color: rgb(63, 61, 61);
+    font-weight: normal;
+}
+
+.col-4 p{
+    font-size: 14px;
+}
+
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+.menu-icon{
+    margin-left: 20px;
+    display: none;
+}
+
+
+
+/* ---------------------- media query for menu -------------------- */
+
+@media only screen and (max-width: 800px){
+
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: white;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+/* ----------------media query for less than 600 screen size------------------ */
+@media only screen and (max-width: 800px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 5px;
+}
